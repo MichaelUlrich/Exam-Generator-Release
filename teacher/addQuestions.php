@@ -85,7 +85,7 @@ function ajaxRequest() {
 		//document.getElementById("test").innerHTML = url;
 	}
 	function goToHomepage() {
-		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-RC/teacherHomepage.php";
+		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-RC/teacher/teacherHomepage.php";
 	}
 </script>
 </head>
