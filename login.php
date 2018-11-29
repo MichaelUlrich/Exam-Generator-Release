@@ -30,12 +30,12 @@
 		$_SESSION['student'] = true;
 		$_SESSION['username'] = $user["username"];
 //	redirect("studentHomepage.php");
-		header('Location: /student/studentHomepage.php');
+		header('Location: ../student/studentHomepage.php');
 		exit();
 	} else if($resultDecoded->{'teacher'} == "true") {
 		$_SESSION['teacher'] = true;
 		$_SESSION['username'] = $user["username"];
-		header('Location: /teacher/teacherHomepage.php');
+		header('Location: ../teacher/teacherHomepage.php');
 		exit();
 	} else {
 	//redirect("login.html");
