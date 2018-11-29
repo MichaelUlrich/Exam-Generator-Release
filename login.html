@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<style>
+/*  body{
+    margin: 100px;
+    padding: 100px;
+    background: url(logo.png) no-repeat;
+    background-size: 400px 400px;
+    background-color: #EF5350;
+    margin-right: 10%;
+    margin-top: 50%;
+    //background-size: cover;
+  }*/
+  .loginBox {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #42A5F5;
+    box-shadow: 2px 2px 15px #000000;
+  }
+  .loginBox h1 {
+    font: comic-sans;
+    margin: auto;
+    padding: 20px;
+    top: 75%;
+    left: 75%;
+    float: center;
+    font-size: 40px;
+  //border: white;
+    transform: translate(-50%, -1);
+    text-align: center;
+  //border-bottom: 6px solid;
+  //background: white;
+  //color: white;
+  //text-shadow: 2px 2px 4px #000000;
+  //text-shadow: 0 0 10px #000000;
+  }
+  .input {
+    text-align: center;
+    padding: 5px;
+    top: 75%;
+    margin-bottom: 30%;
+    margin-top: 30%;
+  }
+  .btn {
+    text-align: center;
+    margin: auto;
+    float: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background: white;
+    border: solid 2px white;
+
+  }
+  .loginInput {
+    //float: center;
+    //text-align: center;
+    margin: auto;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    border: #90CAF9;
+    background:#90CAF9;
+    float: center;
+    margin-bottom: 5%;
+  }
+  .center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #ff0000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+</style>
+<head>
+        <title> CS490 Login </title>
+        <script>
+                <!-- AJAX dynamically change page -->
+                function ajax_post_req() {
+                        var XMLHobj = new XMLHttpRequest();                             //Create XMLHttpRequest Obj
+                        var phpFile = "login.php";                                      //File name of PHP for curl request
+                        var username = document.getElementById("username").value;       //Value entered in 'username' in HTML segment
+                        var password = document.getElementById("pwd").value;            //Value entered in 'pwd' in HTML segment
+                        var url = "username="+username+"&password="+password;           //Secure?
+
+                        XMLHobj.open("POST", phpFile, true);
+                        XMLHobj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
+                        XMLHobj.onreadystatechange = function() {
+                                if(XMLHobj.readyState == 4 && XMLHobj.status == 200) {  //Coneection is established and working
+                                        document.getElementById("status").innerHTML = "Loading...";
+                                        var return_data = XMLHobj.responseText;
+                                        document.getElementById("body").innerHTML = return_data;
+                                }
+                        }
+                        XMLHobj.send(url); //Send request
+                        //Temporary loading text to be replaced with data
+                }
+        </script>
+</head>
+<html>
+  <body id ="body">
+    <div id="status" class="loginBox">
+      <!--<h1> CS491 Login </h1>-->
+        <div class="input">
+            <!--<h1>Login</h1>-->
+            <input class="loginInput" name="username" id="username" type="text" placeholder="Enter Username"><br>
+            <input class="loginInput" name="pwd" id="pwd" type="password" placeholder="Enter Password" ><br>
+            <button class="btn" id="button" onClick="ajax_post_req()"> Login </button><br><br>
+        </div>
+    </div>
+	    <div id="test"></div>
+  </body>
+</html>
