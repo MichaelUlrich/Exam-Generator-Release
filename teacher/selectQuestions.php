@@ -149,7 +149,7 @@
 		xmhlObj.send();
 	}
 	function goToHomepage() {
-		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-RC/teacher/teacherHomepage.php";
+		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/teacherHomepage.php";
 	}
 	window.onload = getAjaxRequest;
 </script>

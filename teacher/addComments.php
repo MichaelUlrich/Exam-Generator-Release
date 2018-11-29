@@ -138,7 +138,7 @@ function confirmChange() {
 		}
 }
 function goToHomepage() {
-	window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-RC/teacher/teacherHomepage.php";
+	window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/teacherHomepage.php";
 }
 function getStudents() {
 	// TODO: cURL to get student usernames -> return JSON of usernames
