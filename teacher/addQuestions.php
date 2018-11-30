@@ -186,6 +186,7 @@
 				<p> Enter Variable Names (Seperated by Commas) </p>
 					<input type="text" name="varNames" id="varNames" placeholder="Variable Names" required><br>
 				<p> Enter Test Cases (Leave Extra Inputs Blank) </p>
+					<form id="testCase" action="">
 						<input type="text" name="testCase1" id="testCase0" placeholder="Test Case #1" required>
 						<input type="text" name="answer1" id="answer1" placeholder="Answer #1" required><br><br>
 						<input type="text" name="testCase2" id="testCase2" placeholder="Test Case #2">
@@ -198,6 +199,7 @@
 						<input type="text" name="answer5" id="answer5" placeholder="Answer #5"><br><br>
 						<input type="text" name="testCase6" id="testCase6" placeholder="Test Case #6">
 						<input type="text" name="answer6" id="answer6" placeholder="Answer #6"><br><br>
+					</form>
 						<p> Select Question Difficulty:
 							<select name="diff" id="diff" required>
 								<option value="easy">Easy</option>
