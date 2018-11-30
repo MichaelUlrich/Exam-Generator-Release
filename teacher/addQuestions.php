@@ -159,8 +159,9 @@
 		xmhlObj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
 		xmhlObj.onreadystatechange = function() {
 			if(xmhlObj.readyState == 4 && xmhlObj.status == 200) {  //Conection is established and working
-				var return_data = xmhlObj.responseText;
-				document.getElementById("test").innerHTML = return_data;
+				//var return_data = xmhlObj.responseText;
+				//document.getElementById("test").innerHTML = return_data;
+					getAjaxRequest(); //Redraw Table
 				}
 			}
 		xmhlObj.send(url); //Send request
