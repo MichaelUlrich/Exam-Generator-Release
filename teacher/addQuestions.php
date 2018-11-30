@@ -94,6 +94,34 @@
 			return "none";
 		}
 	}
+	function sortTable(callingObj, column) {
+		/* column = 0 -> ID
+			 column = 1 -> Question
+			 column = 2 -> Type
+			 column = 4 -> LoopType
+			 column = 3 -> Difficulty
+			 column = 5 -> return
+		*/
+		//document.getElementById("test").innerHTML =
+		var input = document.getElementById(callingObj.id);
+		//document.getElementById("test").innerHTML = callingObj.id;
+		var inputCaps = input.value.toUpperCase();
+		var table = document.getElementById("questionTable");
+		var tr = table.getElementsByTagName("tr");
+		var td;
+		var i;
+
+		for(i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[column];
+			if(td) {
+				if(td.innerHTML.toUpperCase().indexOf(inputCaps) > -1) {
+					tr[i].style.display="";
+				} else {
+					tr[i].style.display="none";
+				}
+			}
+		}
+	}
 	function getAjaxRequest() {
 		var xmhlObj = new XMLHttpRequest();
 		var phpFile = "selectQuestionsGetCurl.php";
@@ -206,6 +234,39 @@
 		</div>
 		<div class="column" style="background-color:#bbb;">
 			<h2> Submitted Questions </h2>
+			<p>Sort Options:
+			<input type="text" id="keywordSelect" onkeyup="sortTable(this, 1)"placeholder="Search by word...">
+			<select id="typeSelect"  onChange="sortTable(this, 2)">
+				<option value="" disabled selected>Type</option>
+				<option value="loop">Loop</option>
+				<option value="method">Method</option>
+				<option value="variable">Variable</option>
+				<option value="dictionaries">Dictionaries</option>
+				<option value="lists">Lists</option>
+				<option value="tuple">Tuples</option>
+				<option value="arrays">Arrays</option>
+				<option value="2dArrays">2D-Arrays</option>
+				<option value="vectors">Vectors</option>
+			</select>
+			<select id="diffSelect"  onChange="sortTable(this, 3)">
+				<option value"" disabled selected>Difficulty</option>
+				<option value="easy">Easy </option>
+				<option value="medium">Medium</option>
+				<option value="hard">Hard</option>
+			</select>
+			<select id="ConstraintSelect"  onChange="sortTable(this, 4)">
+				<option value"" disabled selected>Constraint</option>
+				<option value="none">None</option>
+				<option value="for">For-Loop</option>
+				<option value="while">While-Loop</option>
+				<option value="recursion">Recursion</option>
+			</select>
+			<select id="returnPrintSelect"  onChange="sortTable(this, 5)">
+				<option value"" disabled selected>Return/Print</option>
+				<option value="return">Return</option>
+				<option value="print">Print</option>
+			</select>
+			</p>
 			<table id="questionTable">
 				<thead>
 				<tr>
