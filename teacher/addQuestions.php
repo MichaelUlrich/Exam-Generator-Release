@@ -161,6 +161,7 @@
 			if(xmhlObj.readyState == 4 && xmhlObj.status == 200) {  //Conection is established and working
 				//var return_data = xmhlObj.responseText;
 				//document.getElementById("test").innerHTML = return_data;
+					document.getElementById("teacherInput").reset();
 					getAjaxRequest(); //Redraw Table
 				}
 			}
@@ -176,7 +177,7 @@
 <body>
 	<button onClick="goToHomepage()">Return to Homepage </button>
 	<div class="row">
-		<div class="column" style="background-color:#fff;">
+		<div id="teacherInput" class="column" style="background-color:#fff;">
 			<h2> Enter Questions and Test Cases </h2>
 			<p> Enter Question </p>
 				<textarea name="question" id="question" placeholder="Write your question here" rows="5" cols="50" required></textarea>
