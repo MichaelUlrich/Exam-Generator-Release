@@ -231,7 +231,7 @@
 			</select>
 			</p>
 			<!--<p> Number of Points <input type="text" name="points" id="points" placeholder="Point Value" required> </p>-->
-			<button onClick="moveText(); ajaxRequest();">Submit Question:</button>
+			<button onClick="ajaxRequest();">Submit Question:</button>
 		</div>
 		<div class="column" style="background-color:#bbb;">
 			<h2> Submitted Questions </h2>
