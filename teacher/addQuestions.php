@@ -11,7 +11,7 @@
 	.column{flex: 50%; padding: 10px;}
 	table{border-spacing: 0; border: 1px solid grey}
 	td,th{text-align: left; padding: 16px;}
-	tr:nth-child(even){background-color: #bbb;}
+	tr:nth-child(even){background-color: #fff;}
 </style>
 <script>
 	function moveText() {
