@@ -64,7 +64,7 @@
 			tr.appendChild(returnPrintTd);
 			//tr.appendChild(selectTd);
 			table.appendChild(tr);
-			//document.getElementById("teacherInput").reset();
+			document.getElementById("teacherInput").reset();
 			//GLOBAL_JSON = parseSample; //Initialize global variable for all other functions to use
 			//document.getElementById("test").innerHTML = GLOBAL_JSON[0].question;
 		}
@@ -179,6 +179,7 @@
 	<div class="row">
 		<div class="column" style="background-color:#fff;">
 			<h2> Enter Questions and Test Cases </h2>
+			<form id="teacherInput">
 				<p> Enter Question </p>
 					<textarea name="question" id="question" placeholder="Write your question here" rows="5" cols="50" required></textarea>
 				<p> Enter Function Name </p>
@@ -233,6 +234,7 @@
 						</p>
 						<!--<p> Number of Points <input type="text" name="points" id="points" placeholder="Point Value" required> </p>-->
 						<button onClick="ajaxRequest();">Submit Question:</button>
+					</form>
 		</div>
 		<div class="column" style="background-color:#bbb;">
 			<h2> Submitted Questions </h2>
