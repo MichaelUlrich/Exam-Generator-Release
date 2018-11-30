@@ -9,6 +9,9 @@
 	* {box-sizing: border-box;}
 	.row{display: flex;}
 	.column{flex: 50%; padding: 10px;}
+	table{border-spacing: 0; border: 1px solid grey}
+	td,th{text-align: left; padding: 16px;}
+	tr:nth-child(even){background-color: #bbb;}
 </style>
 <script>
 	function moveText() {
@@ -66,13 +69,6 @@
 		}
 	}
 	function getTestCases() {
-		/*
-			for i = 1; i <=6		//Check 1-6
-				if text+i == ""		//if no text
-					continue				//skip
-				else
-					testCase = text+i //add
-	*/
 		var testCase = document.getElementById("testCase");
 		var j = 0;
 		var testCases = [];
