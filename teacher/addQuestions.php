@@ -67,7 +67,6 @@
 			//GLOBAL_JSON = parseSample; //Initialize global variable for all other functions to use
 			//document.getElementById("test").innerHTML = GLOBAL_JSON[0].question;
 		}
-		document.getElementById("teacherInput").reset();
 	}
 	function getTestCases() {
 		var testCase = document.getElementById("testCase");
@@ -163,6 +162,7 @@
 				var return_data = xmhlObj.responseText;
 				//document.getElementById("test").innerHTML = return_data;
 					getAjaxRequest(); //Redraw Table
+					document.getElementById("teacherInput").reset();
 				}
 			}
 		xmhlObj.send(url); //Send request
