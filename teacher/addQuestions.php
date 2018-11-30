@@ -177,62 +177,62 @@
 <body>
 	<button onClick="goToHomepage()">Return to Homepage </button>
 	<div class="row">
-		<div id="teacherInput" class="column" style="background-color:#fff;">
+		<div class="column" style="background-color:#fff;">
 			<h2> Enter Questions and Test Cases </h2>
-			<p> Enter Question </p>
-				<textarea name="question" id="question" placeholder="Write your question here" rows="5" cols="50" required></textarea>
-			<p> Enter Function Name </p>
-				<input type="text" name="funcName" id="funcName" placeholder="Function Name" required><br>
-			<p> Enter Variable Names (Seperated by Commas) </p>
-				<input type="text" name="varNames" id="varNames" placeholder="Variable Names" required><br>
-			<p> Enter Test Cases (Leave Extra Inputs Blank) </p>
-				<form id="testCase" action="">
-					<input type="text" name="testCase1" id="testCase0" placeholder="Test Case #1" required>
-					<input type="text" name="answer1" id="answer1" placeholder="Answer #1" required><br><br>
-					<input type="text" name="testCase2" id="testCase2" placeholder="Test Case #2" required>
-					<input type="text" name="answer2" id="answer2" placeholder="Answer #2" required><br><br>
-					<input type="text" name="testCase3" id="testCase3" placeholder="Test Case #3" required>
-					<input type="text" name="answer3" id="answer3" placeholder="Answer #3" required><br><br>
-					<input type="text" name="testCase4" id="testCase4" placeholder="Test Case #4" required>
-					<input type="text" name="answer4" id="answer4" placeholder="Answer #4" required><br><br>
-					<input type="text" name="testCase5" id="testCase5" placeholder="Test Case #5" required>
-					<input type="text" name="answer5" id="answer5" placeholder="Answer #5" required><br><br>
-					<input type="text" name="testCase6" id="testCase6" placeholder="Test Case #6" required>
-					<input type="text" name="answer6" id="answer6" placeholder="Answer #6" required><br><br>
+			<form id="teacherInput">
+				<p> Enter Question </p>
+					<textarea name="question" id="question" placeholder="Write your question here" rows="5" cols="50" required></textarea>
+				<p> Enter Function Name </p>
+					<input type="text" name="funcName" id="funcName" placeholder="Function Name" required><br>
+				<p> Enter Variable Names (Seperated by Commas) </p>
+					<input type="text" name="varNames" id="varNames" placeholder="Variable Names" required><br>
+				<p> Enter Test Cases (Leave Extra Inputs Blank) </p>
+						<input type="text" name="testCase1" id="testCase0" placeholder="Test Case #1" required>
+						<input type="text" name="answer1" id="answer1" placeholder="Answer #1" required><br><br>
+						<input type="text" name="testCase2" id="testCase2" placeholder="Test Case #2" required>
+						<input type="text" name="answer2" id="answer2" placeholder="Answer #2" required><br><br>
+						<input type="text" name="testCase3" id="testCase3" placeholder="Test Case #3" required>
+						<input type="text" name="answer3" id="answer3" placeholder="Answer #3" required><br><br>
+						<input type="text" name="testCase4" id="testCase4" placeholder="Test Case #4" required>
+						<input type="text" name="answer4" id="answer4" placeholder="Answer #4" required><br><br>
+						<input type="text" name="testCase5" id="testCase5" placeholder="Test Case #5" required>
+						<input type="text" name="answer5" id="answer5" placeholder="Answer #5" required><br><br>
+						<input type="text" name="testCase6" id="testCase6" placeholder="Test Case #6" required>
+						<input type="text" name="answer6" id="answer6" placeholder="Answer #6" required><br><br>
+						<p> Select Question Difficulty:
+							<select name="diff" id="diff" required>
+								<option value="easy">Easy</option>
+								<option value="medium">Medium</option>
+								<option value="hard">Hard</option>
+							</select>
+						</p>
+						<p> Select Question Type:
+							<select name="type" id="type" required>
+								<option value="loop">Loop</option>
+								<option value="method">Method</option>
+								<option value="variable">Variable</option>
+								<option value="dictionaries">Dictionaries</option>
+								<option value="lists">Lists</option>
+								<option value="tuple">Tuples</option>
+								<option value="arrays">Arrays</option>
+								<option value="2dArrays">2D-Arrays</option>
+								<option value="vectors">Vectors</option>
+							</select>
+						</p>
+						<p> Select Constraint:
+									<input type="radio" id="forRadio" name="loopType" value="forLoop">For-Loop
+									<input type="radio" id="whileRadio" name="loopType" value="whileLoop">While-Loop
+									<input type="radio" id="recursionRadio" name="loopType" value="whileLoop">Recursion<br>
+						</p>
+						<p> Select if the output is Return or Printed
+						<select name="displayType" id="displayType" required>
+								<option value="return">Return</option>
+								<option value="print">Print</option>
+						</select>
+						</p>
+						<!--<p> Number of Points <input type="text" name="points" id="points" placeholder="Point Value" required> </p>-->
+						<button onClick="ajaxRequest();">Submit Question:</button>
 				</form>
-			<p> Select Question Difficulty:
-				<select name="diff" id="diff" required>
-					<option value="easy">Easy</option>
-					<option value="medium">Medium</option>
-					<option value="hard">Hard</option>
-				</select>
-			</p>
-			<p> Select Question Type:
-				<select name="type" id="type" required>
-					<option value="loop">Loop</option>
-					<option value="method">Method</option>
-					<option value="variable">Variable</option>
-					<option value="dictionaries">Dictionaries</option>
-					<option value="lists">Lists</option>
-					<option value="tuple">Tuples</option>
-					<option value="arrays">Arrays</option>
-					<option value="2dArrays">2D-Arrays</option>
-					<option value="vectors">Vectors</option>
-				</select>
-			</p>
-			<p> Select Constraint:
-						<input type="radio" id="forRadio" name="loopType" value="forLoop">For-Loop
-						<input type="radio" id="whileRadio" name="loopType" value="whileLoop">While-Loop
-						<input type="radio" id="recursionRadio" name="loopType" value="whileLoop">Recursion<br>
-			</p>
-			<p> Select if the output is Return or Printed
-			<select name="displayType" id="displayType" required>
-					<option value="return">Return</option>
-					<option value="print">Print</option>
-			</select>
-			</p>
-			<!--<p> Number of Points <input type="text" name="points" id="points" placeholder="Point Value" required> </p>-->
-			<button onClick="ajaxRequest();">Submit Question:</button>
 		</div>
 		<div class="column" style="background-color:#bbb;">
 			<h2> Submitted Questions </h2>
