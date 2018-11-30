@@ -162,7 +162,7 @@
 				var return_data = xmhlObj.responseText;
 				//document.getElementById("test").innerHTML = return_data;
 					getAjaxRequest(); //Redraw Table
-					document.getElementById("teacherInput").reset();
+					//document.getElementById("teacherInput").reset();
 				}
 			}
 		xmhlObj.send(url); //Send request
