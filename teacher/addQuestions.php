@@ -64,6 +64,7 @@
 			tr.appendChild(returnPrintTd);
 			//tr.appendChild(selectTd);
 			table.appendChild(tr);
+			document.getElementById("teacherInput").reset();
 			//GLOBAL_JSON = parseSample; //Initialize global variable for all other functions to use
 			//document.getElementById("test").innerHTML = GLOBAL_JSON[0].question;
 		}
@@ -161,7 +162,6 @@
 			if(xmhlObj.readyState == 4 && xmhlObj.status == 200) {  //Conection is established and working
 				//var return_data = xmhlObj.responseText;
 				//document.getElementById("test").innerHTML = return_data;
-					document.getElementById("teacherInput").reset();
 					getAjaxRequest(); //Redraw Table
 				}
 			}
