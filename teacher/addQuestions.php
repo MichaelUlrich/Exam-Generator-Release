@@ -64,7 +64,7 @@
 			tr.appendChild(returnPrintTd);
 			//tr.appendChild(selectTd);
 			table.appendChild(tr);
-			document.getElementById("teacherInput").reset();
+			//document.getElementById("teacherInput").reset();
 			//GLOBAL_JSON = parseSample; //Initialize global variable for all other functions to use
 			//document.getElementById("test").innerHTML = GLOBAL_JSON[0].question;
 		}
