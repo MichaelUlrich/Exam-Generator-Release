@@ -189,16 +189,16 @@
 				<p> Enter Test Cases (Leave Extra Inputs Blank) </p>
 						<input type="text" name="testCase1" id="testCase0" placeholder="Test Case #1" required>
 						<input type="text" name="answer1" id="answer1" placeholder="Answer #1" required><br><br>
-						<input type="text" name="testCase2" id="testCase2" placeholder="Test Case #2" required>
-						<input type="text" name="answer2" id="answer2" placeholder="Answer #2" required><br><br>
-						<input type="text" name="testCase3" id="testCase3" placeholder="Test Case #3" required>
-						<input type="text" name="answer3" id="answer3" placeholder="Answer #3" required><br><br>
-						<input type="text" name="testCase4" id="testCase4" placeholder="Test Case #4" required>
-						<input type="text" name="answer4" id="answer4" placeholder="Answer #4" required><br><br>
-						<input type="text" name="testCase5" id="testCase5" placeholder="Test Case #5" required>
-						<input type="text" name="answer5" id="answer5" placeholder="Answer #5" required><br><br>
-						<input type="text" name="testCase6" id="testCase6" placeholder="Test Case #6" required>
-						<input type="text" name="answer6" id="answer6" placeholder="Answer #6" required><br><br>
+						<input type="text" name="testCase2" id="testCase2" placeholder="Test Case #2">
+						<input type="text" name="answer2" id="answer2" placeholder="Answer #2" ><br><br>
+						<input type="text" name="testCase3" id="testCase3" placeholder="Test Case #3" >
+						<input type="text" name="answer3" id="answer3" placeholder="Answer #3" ><br><br>
+						<input type="text" name="testCase4" id="testCase4" placeholder="Test Case #4" >
+						<input type="text" name="answer4" id="answer4" placeholder="Answer #4" ><br><br>
+						<input type="text" name="testCase5" id="testCase5" placeholder="Test Case #5" >
+						<input type="text" name="answer5" id="answer5" placeholder="Answer #5"><br><br>
+						<input type="text" name="testCase6" id="testCase6" placeholder="Test Case #6">
+						<input type="text" name="answer6" id="answer6" placeholder="Answer #6"><br><br>
 						<p> Select Question Difficulty:
 							<select name="diff" id="diff" required>
 								<option value="easy">Easy</option>
@@ -225,7 +225,7 @@
 									<input type="radio" id="recursionRadio" name="loopType" value="whileLoop">Recursion<br>
 						</p>
 						<p> Select if the output is Return or Printed
-						<select name="displayType" id="displayType" required>
+						<select name="displayType" id="displayType">
 								<option value="return">Return</option>
 								<option value="print">Print</option>
 						</select>
