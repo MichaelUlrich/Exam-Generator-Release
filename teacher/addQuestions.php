@@ -21,6 +21,50 @@
 		node.appendChild(textNode);
 		document.getElementById('selectedList').appendChild(node);
 	}
+	function drawAvailableTable(sample) {
+		var table = document.getElementById("questionTableBody");
+		table.innerHTML="";
+		var parseSample = JSON.parse(sample); //Need for response from AJAX cURL */
+		for(var i in parseSample) {
+			var iInt = parseInt(i, 10);
+			iInt += 1;
+			var tr = document.createElement("tr");
+			var idTd = document.createElement("td");
+			var idText = document.createTextNode(iInt);
+			idTd.appendChild(idText);
+			var questionTd = document.createElement("td");
+			var questionText = document.createTextNode(parseSample[i].question);
+			questionTd.appendChild(questionText);
+			var typeTd = document.createElement("td");
+			var typeText = document.createTextNode(parseSample[i].type);
+			typeTd.appendChild(typeText);
+			var diffTd = document.createElement("td");
+			var diffText =  document.createTextNode(parseSample[i].difficulty);
+			diffTd.appendChild(diffText);
+			//var pointsTd =  document.createElement("td");
+			//pointsTd.innerHTML = '<div class="text-center"><input type="text" id=points placeholder="points"></div>';
+			//pointsTd.appendChild(pointsText);
+			var constrainTd = document.createElement("td");
+			var constrainText = document.createTextNode(parseSample[i].loopType);
+			constrainTd.appendChild(constrainText);
+			var returnPrintTd = document.createElement("td");
+			var returnPrintText = document.createTextNode(parseSample[i].returnPrint);
+			returnPrintTd.appendChild(returnPrintText);
+			//var selectTd = document.createElement("td");
+			//selectTd.innerHTML = '<div class="text-center" ><input type="button" value="Select" onClick="addQuestion('+i+')" id="question_to_add_'+i+'"></div>';
+			tr.appendChild(idTd);
+			tr.appendChild(questionTd);
+			tr.appendChild(typeTd);
+			tr.appendChild(diffTd);
+			//tr.appendChild(pointsTd);
+			tr.appendChild(constrainTd);
+			tr.appendChild(returnPrintTd);
+			//tr.appendChild(selectTd);
+			table.appendChild(tr);
+			//GLOBAL_JSON = parseSample; //Initialize global variable for all other functions to use
+			//document.getElementById("test").innerHTML = GLOBAL_JSON[0].question;
+		}
+	}
 	function getTestCases() {
 		/*
 			for i = 1; i <=6		//Check 1-6
@@ -54,7 +98,21 @@
 			return "none";
 		}
 	}
-function ajaxRequest() {
+	function getAjaxRequest() {
+		var xmhlObj = new XMLHttpRequest();
+		var phpFile = "selectQuestionsGetCurl.php";
+		var return_data
+		xmhlObj.open("POST", phpFile, true);
+		xmhlObj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
+		xmhlObj.onreadystatechange = function() {
+			if(xmhlObj.readyState == 4 && xmhlObj.status == 200) {  //Conection is established and working
+				return_data = xmhlObj.responseText;
+				drawAvailableTable(return_data);
+			}
+		}
+		xmhlObj.send();
+	}
+	function ajaxRequest() {
 		/*
 			Question, Type(For/While), Difficulty, Points, Test Cases[], Function Name, Variables[], Return/Print
 		*/
@@ -87,6 +145,7 @@ function ajaxRequest() {
 	function goToHomepage() {
 		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/teacherHomepage.php";
 	}
+	window.onload = getAjaxRequest;
 </script>
 </head>
 <body>
@@ -151,8 +210,20 @@ function ajaxRequest() {
 		</div>
 		<div class="column" style="background-color:#bbb;">
 			<h2> Submitted Questions </h2>
-			<p id="test"></p>
-			<ul id="selectedList"></ul>
+			<table id="questionTable">
+				<thead>
+				<tr>
+					<th>ID</th>
+					<th>Question</th>
+					<th>Type</th>
+					<th>Difficulty</th>
+					<!--<th>Points</th>-->
+					<th>Constraint</th>
+					<th>Return/Print</th>
+				</tr>
+			</thead>
+			<tbody id="questionTableBody">
+			</tbody>
 		</div>
 	</div>
 </body>
