@@ -91,15 +91,17 @@
                         XMLHobj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
                         XMLHobj.onreadystatechange = function() {
                                 if(XMLHobj.readyState == 4 && XMLHobj.status == 200) {  //Coneection is established and working
-                                        document.getElementById("status").innerHTML = "Loading...";
+                                        //document.getElementById("status").innerHTML = "Loading...";
                                         var return_data = XMLHobj.responseText;
                                         //document.getElementById("body").innerHTML = return_data;
                                         var url = "https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/";
                                         url += return_data;
                                         window.location = url;
+                                        document.getElementById("status").innerHTML = url;
                                 }
                         }
                         XMLHobj.send(url); //Send request
+                        //document.getElementById("status").innerHTML = 
                         //Temporary loading text to be replaced with data
 
                 }
