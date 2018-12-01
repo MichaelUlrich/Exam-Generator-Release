@@ -27,7 +27,7 @@ accessing -->
 </head>
 <body>
 	<h2> Student  Homepage </h2>
-	<button class="block" onclick="window.location.href='test.php'"> Take Test </button><br>
-	<button class="block" onclick="window.location.href='grades.php'"> View Grades and Comments </button><br>
+	<button class="block" onclick="window.location.replace('https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/student/test.php')"> Take Test </button><br>
+	<button class="block" onclick="window.location.replace('https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/student/grades.php'"> View Grades and Comments </button><br>
 </body>
 </html>

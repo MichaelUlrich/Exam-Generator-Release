@@ -73,7 +73,7 @@
 		drawExam(parseQuestions);
 	}
 	function goToHomepage() {
-		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-RC/studentHomepage.php";
+		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/student/studentHomepage.php";
 	}
 	function generateURL(formText, id) {
 		var username = "<?php echo $_SESSION['username']?>";
