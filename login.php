@@ -13,7 +13,7 @@
 	ini_set('display_errors', TRUE);
 
 	$user = array('username' => $_POST['username'], 'password' =>$_POST['password']);
-	var_dump($user);
+	//var_dump($user);
 	$middle_url = "https://web.njit.edu/~bkw2/middle_beta.php";				//Receive if login is for student or teacher
 	$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $middle_url);                             //Set URL
