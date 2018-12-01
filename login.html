@@ -94,7 +94,9 @@
                                         document.getElementById("status").innerHTML = "Loading...";
                                         var return_data = XMLHobj.responseText;
                                         //document.getElementById("body").innerHTML = return_data;
-                                        window.location = return_data;
+                                        var url = "https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/";
+                                        url += return_data;
+                                        window.location = url;
                                 }
                         }
                         XMLHobj.send(url); //Send request
