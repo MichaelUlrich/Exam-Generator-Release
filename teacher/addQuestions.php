@@ -154,19 +154,15 @@
 		var returnPrint = document.getElementById('displayType').value;
 		var url = "question="+question+"&type="+type+"&loopType="+loopType+"&diff="+diff+"&testCases="+testCases
 							+"&functionName="+functionName+"&variableNames="+varNames+"&returnPrint="+returnPrint; //For AJAX POST
-
 		xmhlObj.open("POST", phpFile, true);
 		xmhlObj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
 		xmhlObj.onreadystatechange = function() {
 			if(xmhlObj.readyState == 4 && xmhlObj.status == 200) {  //Conection is established and working
 				var return_data = xmhlObj.responseText;
-				//document.getElementById("test").innerHTML = return_data;
 					getAjaxRequest(); //Redraw Table
-					//document.getElementById("teacherInput").reset();
 				}
 			}
 		xmhlObj.send(url); //Send request
-		//document.getElementById("test").innerHTML = url;
 	}
 	function goToHomepage() {
 		window.location.href="https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/teacherHomepage.php";
@@ -179,7 +175,7 @@
 	<div class="row">
 		<div class="column" style="background-color:#fff;">
 			<h2> Enter Questions and Test Cases </h2>
-			<form id="teacherInput">
+			<!--<form id="teacherInput">-->
 				<p> Enter Question </p>
 					<textarea name="question" id="question" placeholder="Write your question here" rows="5" cols="50" required></textarea>
 				<p> Enter Function Name </p>
@@ -234,7 +230,7 @@
 						</p>
 						<!--<p> Number of Points <input type="text" name="points" id="points" placeholder="Point Value" required> </p>-->
 						<button onClick="ajaxRequest();">Submit Question:</button>
-					</form>
+					<!--</form>-->
 		</div>
 		<div class="column" style="background-color:#bbb;">
 			<h2> Submitted Questions </h2>
