@@ -93,17 +93,16 @@
                                 if(XMLHobj.readyState == 4 && XMLHobj.status == 200) {  //Coneection is established and working
                                         //document.getElementById("status").innerHTML = "Loading...";
                                         var return_data = XMLHobj.responseText;
-                                        //document.getElementById("body").innerHTML = return_data;
-                                        var TestUrl = "https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/";
-                                        TestUrl += return_data;
-                                        window.location = TestUrl;
-                                        document.getElementById("status").innerHTML = TestUrl;
+                                        document.getElementById("body").innerHTML = return_data;
+                                      //  var TestUrl = "https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/";
+                                      //  TestUrl += return_data;
+                                      //  window.location = TestUrl;
+                                      //  document.getElementById("status").innerHTML = TestUrl;
                                 }
                         }
                         XMLHobj.send(url); //Send request
                         //document.getElementById("status").innerHTML =
                         //Temporary loading text to be replaced with data
-
                 }
         </script>
 </head>
