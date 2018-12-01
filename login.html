@@ -94,7 +94,7 @@
                                         document.getElementById("status").innerHTML = "Loading...";
                                         var return_data = XMLHobj.responseText;
                                         //document.getElementById("body").innerHTML = return_data;
-                                        window.location.href = return_data;
+                                        window.location.replace(return_data);
                                 }
                         }
                         XMLHobj.send(url); //Send request
