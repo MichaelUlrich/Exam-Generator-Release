@@ -30,12 +30,12 @@
 		$_SESSION['student'] = true;
 		$_SESSION['username'] = $user["username"];
 //	redirect("studentHomepage.php");
-		header('Location: https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/student/studentHomepage.php');
+		//header('Location: https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/student/studentHomepage.php');
 		exit();
 	} else if($resultDecoded->{'teacher'} == "true") {
 		$_SESSION['teacher'] = true;
 		$_SESSION['username'] = $user["username"];
-		header('Location: https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/teacherHomepage.php');
+		//header('Location: https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/teacherHomepage.php');
 		exit();
 	} else {
 	//redirect("login.html");

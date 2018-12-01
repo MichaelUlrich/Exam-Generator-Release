@@ -93,11 +93,13 @@
                                 if(XMLHobj.readyState == 4 && XMLHobj.status == 200) {  //Coneection is established and working
                                         document.getElementById("status").innerHTML = "Loading...";
                                         var return_data = XMLHobj.responseText;
-                                        document.getElementById("body").innerHTML = return_data;
+                                        //document.getElementById("body").innerHTML = return_data;
+                                        window.location.href = return_data;
                                 }
                         }
                         XMLHobj.send(url); //Send request
                         //Temporary loading text to be replaced with data
+
                 }
         </script>
 </head>
