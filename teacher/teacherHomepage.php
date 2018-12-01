@@ -27,9 +27,9 @@ accessing -->
 </head>
 <body>
 	<h2>Teacher Homepage</h2>
-	<button class="block" onclick="window.location.href='~meu3/CS490/Exam-Generator-Release/teacher/addQuestions.php'"> Add Questions </button><br>
-	<button class="block" onclick="window.location.href='~meu3/CS490/Exam-Generator-Release/teacher/selectQuestions.php'"> Select Questions </button><br>
+	<button class="block" onclick="window.location.replace('https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/addQuestions.php')"> Add Questions </button><br>
+	<button class="block" onclick="window.location.href=('https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/selectQuestions.php')"> Select Questions </button><br>
 	<!--<button class="block" onclick="window.location.href='test.php'"> Review Test[REMOVE AFTER TESTING] </button><br>-->
-	<button class="block" onclick="window.location.href='~meu3/CS490/Exam-Generator-Release/teacher/addComments.php'"> Add Comments/Grades </button><br>
+	<button class="block" onclick="window.location.href=('https://web.njit.edu/~meu3/CS490/Exam-Generator-Release/teacher/addComments.php')"> Add Comments/Grades </button><br>
 </body>
 </html>
