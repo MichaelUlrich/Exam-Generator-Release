@@ -91,7 +91,7 @@
 		var testingText = "";
 		var return_data = "";
 		//var encodedURL = encodeURIComponent(URL);
-		document.getElementById("testing").innerHTML = encodedURL;
+		document.getElementById("testing").innerHTML = URL;
 		xmhlObj.open("POST", phpFile, false);
 		xmhlObj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
 		xmhlObj.onreadystatechange = function() {
