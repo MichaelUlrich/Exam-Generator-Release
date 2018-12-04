@@ -90,7 +90,7 @@
 	//GOBAL_JSON += url;
 		var testingText = "";
 		var return_data = "";
-		var encodedUrl = HttpUtility.UrlEncode(URL);
+		var encodedURL = encodeURIComponent(URL);
 		xmhlObj.open("POST", phpFile, false);
 		xmhlObj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
 		xmhlObj.onreadystatechange = function() {
@@ -100,7 +100,7 @@
 			}
 			//document.getElementById("testing2").innerHTML = "server output: "+USERNAME;
 		}
-		xmhlObj.send(encodedUrl); //Send request
+		xmhlObj.send(URL); //Send request
 		//document.getElementById("testing").innerHTML = testingText;
 	}
 	function ajaxGetRequest() {
