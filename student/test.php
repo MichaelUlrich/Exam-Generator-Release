@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <?php include 'studentHeader.php'; ?>
+<?php include 'testCurl.php'; ?>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,8 +91,9 @@
 	//GOBAL_JSON += url;
 		var testingText = "";
 		var return_data = "";
-		//var encodedURL = encodeURIComponent(URL);
-		document.getElementById("testing").innerHTML = URL;
+		var encodedURL = encodeURIComponent(URL);
+		document.getElementById("testing").innerHTML = encodedURL;
+		document.getElementById("testing2").innerHTML + "<?php echo $testData?>";
 		xmhlObj.open("POST", phpFile, false);
 		xmhlObj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Sending URL encoded variables
 		xmhlObj.onreadystatechange = function() {
@@ -102,7 +104,7 @@
 			//document.getElementById("testing2").innerHTML = "server output: "+USERNAME;
 		}
 		//xmhlObj.send(encodedURL); //Send request
-		xmhlObj.send(URL);
+		xmhlObj.send(encodedURL);
 		//document.getElementById("testing").innerHTML = testingText;
 	}
 	function ajaxGetRequest() {
