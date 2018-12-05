@@ -88,7 +88,7 @@
 		//commentTr.appendChild(gradeTd);
 		codeTr.appendChild(codeIdTd);
 		codeTr.appendChild(inputTd);
-		codTr.appendChild(gradeIdTd);
+		codeTr.appendChild(gradeIdTd);
 		codeTr.appendChild(commentTd);
 		codeTr.appendChild(gradeTd);
 		codeTableBody.appendChild(codeTr)
