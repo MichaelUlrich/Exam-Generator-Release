@@ -49,7 +49,7 @@
 		scaledGrade = scaledGrade * 100;
 		scaledGrade = scaledGrade.toFixed(0);
 	//	if(scaledGrade == "NaN" || scaledGrade = null) {scaledGrade = "";}
-		document.getElementById("studentGrade").innerHTML = scaledGrade + '%';
+		document.getElementById("studentGrade").innerHTML = 'Final Grade: ' + scaledGrade + '%';
 	}
 	function drawComments() {
 		var inputTd, codeIdTd,gradeIdTd, idText, inputText, commentTd, commentText,
@@ -108,7 +108,7 @@
 	<div id="banner">
 		<button id="homepageButton" name="homepageButton" onclick="goToHomepage()">Return to Homepage</button>
 	</div>
-	<h2>Grades and Comments <h2 id="studentGrade"></h2></h2>
+	<h2 id="studentGrade"></h2></h2>
 	<div id="rowDiv" class="row">
 		<p id="testing"></p>
 		<div class="column" style="background-color:#fff">
