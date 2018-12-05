@@ -7,10 +7,11 @@
 					'returnPrint' => $_POST['returnPrint']);
 	//echo $question;
 	//:var_dump($question);
-	urlencode($question);
+
+	$encodedQuestion = rawurlencode($question);
 	$ch = curl_init("https://web.njit.edu/~bkw2/addQuestions.php");
 	curl_setopt($ch, CURLOPT_POST, true);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $question);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $encodedQuestion);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 	$result = curl_exec($ch);
