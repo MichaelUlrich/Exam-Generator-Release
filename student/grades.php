@@ -117,7 +117,6 @@
 				<thead>
 					<th>Question #</th>
 					<th>Code</th>
-					<th>Question #</th>
 					<th>Auto Comments</th>
 					<th>Grade</th>
 				</thead>
