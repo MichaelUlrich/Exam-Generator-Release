@@ -83,13 +83,16 @@
 			gradeTd = document.createElement("td");
 			gradeText = document.createTextNode(GLOBAL_JSON[i].pointsGiven+'/'+GLOBAL_JSON[i].maxPoints);
 			gradeTd.appendChild(gradeText);
-		commentTr.appendChild(gradeIdTd);
-		commentTr.appendChild(commentTd);
-		commentTr.appendChild(gradeTd);
+	//	commentTr.appendChild(gradeIdTd);
+		//commentTr.appendChild(commentTd);
+		//commentTr.appendChild(gradeTd);
 		codeTr.appendChild(codeIdTd);
 		codeTr.appendChild(inputTd);
+		codTr.appendChild(gradeIdTd);
+		codeTr.appendChild(commentTd);
+		codeTr.appendChild(gradeTd);
 		codeTableBody.appendChild(codeTr)
-		gradeTableBody.appendChild(commentTr);
+		//gradeTableBody.appendChild(commentTr);
 		}
 		getGrade();
 	}
@@ -114,6 +117,9 @@
 				<thead>
 					<th>Question #</th>
 					<th>Code</th>
+					<th>Question #</th>
+					<th>Auto Comments</th>
+					<th>Grade</th>
 				</thead>
 				<tbody = id="codeTableBody"></tbody>
 			</table>
