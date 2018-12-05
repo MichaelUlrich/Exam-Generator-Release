@@ -88,7 +88,7 @@
 		//commentTr.appendChild(gradeTd);
 		codeTr.appendChild(codeIdTd);
 		codeTr.appendChild(inputTd);
-		codeTr.appendChild(gradeIdTd);
+		//codeTr.appendChild(gradeIdTd);
 		codeTr.appendChild(commentTd);
 		codeTr.appendChild(gradeTd);
 		codeTableBody.appendChild(codeTr)
@@ -124,7 +124,7 @@
 				<tbody = id="codeTableBody"></tbody>
 			</table>
 		</div>
-		<div class="column" style="background-color:#a1">
+	<!--	<div class="column" style="background-color:#a1">
 			<h2>Grade:</h2>
 			<h2 id="studentGrade"></h2>
 			<h2>Comments and Points</h2>
@@ -137,8 +137,8 @@
 					</tr>
 				</thead>
 				<tbody id="gradeTableBody"></tbody>
-			</table>
-		</div>
+			</table
+		</div> -->
 	</div>
 	<div>
 	<div>
