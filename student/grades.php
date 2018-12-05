@@ -76,7 +76,7 @@
 			inputTd = document.createElement("td");
 			inputTd.innerHTML = '<textarea readonly id="codeText" maxlength="5000" cols="60" rows="10">'+GLOBAL_JSON[i].studentInput+'</textarea><br>';
 			//inputText = document.createTextNode(GLOBAL_JSON[i].studentInput);
-			inputTd.appendChild(inputText);
+			//inputTd.appendChild(inputText);
 			commentTd = document.createElement("td");
 			commentText = document.createTextNode(GLOBAL_JSON[i].comments);
 			commentTd.appendChild(commentText);
