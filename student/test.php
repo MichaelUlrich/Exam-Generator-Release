@@ -103,7 +103,7 @@
 			//document.getElementById("testing2").innerHTML = "server output: "+USERNAME;
 		}
 		//xmhlObj.send(encodedURL); //Send request
-		xmhlObj.send(encodedURL);
+		xmhlObj.send(URL);
 		//document.getElementById("testing").innerHTML = testingText;
 	}
 	function ajaxGetRequest() {
