@@ -108,7 +108,7 @@
 	<div id="banner">
 		<button id="homepageButton" name="homepageButton" onclick="goToHomepage()">Return to Homepage</button>
 	</div>
-	<h2>Grades and Comments</h2>
+	<h2>Grades and Comments <h2 id="studentGrade"></h2></h2>
 	<div id="rowDiv" class="row">
 		<p id="testing"></p>
 		<div class="column" style="background-color:#fff">
