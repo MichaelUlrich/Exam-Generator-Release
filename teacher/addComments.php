@@ -179,7 +179,7 @@ window.onload = function() {
 	<h2> Edit Grades and Comments </h2>
 	<div class="row">
 		<div class="column" id="teacherInput" style="background-color:#bbb">
-				<div class="inline" id="codeView"></div>
+				<div class="inline" id="codeView" style="height: 360px;"></div>
 				<div class="inline" id="commentEdit"></div>
 				<div id="gradeEdit"></div>
 				<div id="buttonEdit"></div>
