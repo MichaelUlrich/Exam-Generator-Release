@@ -101,8 +101,8 @@ function drawTeacherInput(currQuestion) {
 	var	grade = GLOBAL_JSON[currQuestion].pointsGiven;
 	var	code = GLOBAL_JSON[currQuestion].studentInput;
 
-	commentDiv.innerHTML = '<h3>Edit Comment</h3><textarea id="commentEditText" maxlength="5000" cols="60" rows="10">'+comment+'</textarea><br>';
-	codeDiv.innerHTML = '<h3>View Student\'s Code</h3><textarea readonly id="codeText" maxlength="5000" cols="60" rows="10">'+code+'</textarea><br>';
+	commentDiv.innerHTML = '<h3>Edit Comment</h3><textarea id="commentEditText" maxlength="5000" cols="100" rows="20">'+comment+'</textarea><br>';
+	codeDiv.innerHTML = '<h3>View Student\'s Code</h3><textarea readonly id="codeText" maxlength="5000" cols="100" rows="20">'+code+'</textarea><br>';
 	gradeDiv.innerHTML ='<h3>Edit Grade</h3><input type="text" id="gradeEditText" value="'+grade+'"></input><br><br>';
 	buttonDiv.innerHTML='<button onClick="edit('+currQuestion+')">Submit Edit</button>';
 }
@@ -179,7 +179,7 @@ window.onload = function() {
 	<h2> Edit Grades and Comments </h2>
 	<div class="row">
 		<div class="column" id="teacherInput" style="background-color:#bbb">
-				<div class="inline" id="codeView" style="height: 360px;"></div>
+				<div class="inline" id="codeView" ></div>
 				<div class="inline" id="commentEdit"></div>
 				<div id="gradeEdit"></div>
 				<div id="buttonEdit"></div>
