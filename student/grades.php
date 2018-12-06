@@ -74,12 +74,13 @@
 			codeIdTd.appendChild(codeIdText);
 
 			inputTd = document.createElement("td");
-			inputTd.innerHTML = '<textarea readonly id="codeText" maxlength="5000" cols="60" rows="10">'+GLOBAL_JSON[i].studentInput+'</textarea><br>';
+			inputTd.innerHTML = '<textarea readonly id="codeText" maxlength="5000" cols="100" rows="20">'+GLOBAL_JSON[i].studentInput+'</textarea><br>';
 			//inputText = document.createTextNode(GLOBAL_JSON[i].studentInput);
 			//inputTd.appendChild(inputText);
 			commentTd = document.createElement("td");
-			commentText = document.createTextNode(GLOBAL_JSON[i].comments);
-			commentTd.appendChild(commentText);
+			commentTd.innerHTML = '<textarea readonly id="codeText" maxlength="5000" cols="100" rows="20">'+GLOBAL_JSON[i].comments+'</textarea><br>';
+			//commentText = document.createTextNode(GLOBAL_JSON[i].comments);
+			//commentTd.appendChild(commentText);
 			gradeTd = document.createElement("td");
 			gradeText = document.createTextNode(GLOBAL_JSON[i].pointsGiven+'/'+GLOBAL_JSON[i].maxPoints);
 			gradeTd.appendChild(gradeText);
