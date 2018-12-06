@@ -7,7 +7,7 @@
 	*{box-sizing: border-box;}
 	.row{display: flex;}
 	.column{flex: 50%; padding: 10px}
-	.inline{display:inline-block; height: 360px;}
+	.inline{display:inline-block; height: 360px}
 	//table,td{border: 1px solid grey;}
 	table{border-spacing: 0; border: 1px solid grey}
 	td,th{text-align: left; padding: 16px;}
